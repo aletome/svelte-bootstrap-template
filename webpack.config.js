@@ -1,6 +1,8 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+	CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 
@@ -24,36 +26,23 @@ module.exports = {
 		chunkFilename: '[name].[id].js'
 	},
 	module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.(scss)$/,
 				use: [{
-					// inject CSS to page
-					loader: 'style-loader'
-				  },
-				  {
-					// translates CSS into CommonJS modules
-					loader: 'css-loader'
-				  },
-				  {
-					// Run postcss actions
-					loader: 'postcss-loader',
-					options: {
-					  // `postcssOptions` is needed for postcss 8.x;
-					  // if you use postcss 7.x skip the key
-					  postcssOptions: {
-						// postcss plugins, can be exported to postcss.config.js
-						plugins: function () {
-						  return [
-							require('autoprefixer')
-						  ];
-						}
-					  }
-					}
-				  },
-				  {
-					// compiles Sass to CSS
-					loader: 'sass-loader'
+						// inject CSS to page
+						loader: 'style-loader'
+					},
+					{
+						// translates CSS into CommonJS modules
+						loader: 'css-loader'
+					},
+					{
+						// Run postcss actions
+						loader: 'postcss-loader'
+					},
+					{
+						// compiles Sass to CSS
+						loader: 'sass-loader'
 					}
 				]
 			},
@@ -89,10 +78,10 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin(),
 		new CopyPlugin({
-			patterns: [
-			  { from: path.resolve(__dirname, 'src', 'favicon.png') },
-			],
+			patterns: [{
+				from: path.resolve(__dirname, 'src', 'favicon.png')
+			}, ],
 		}),
 	],
-	devtool: prod ? false: 'source-map'
+	devtool: prod ? false : 'source-map'
 };

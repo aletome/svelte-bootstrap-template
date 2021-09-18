@@ -1,6 +1,6 @@
 {
   "name": "svelte-bootstrap-template",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://github.com/aletome/svelte-bootstrap-template",
   "author": {
     "name": "Alessandro Tomè"
@@ -10,29 +10,31 @@
     "url": "https://github.com/aletome/svelte-bootstrap-template"
   },
   "devDependencies": {
-    "bootstrap": "^5.0.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^7.0.0",
+    "autoprefixer": "^10.3.4",
+    "bootstrap": "^5.1.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
-    "css-loader": "^5.2.4",
-    "html-webpack-plugin": "^5.3.1",
-    "mini-css-extract-plugin": "^1.6.0",
-    "postcss": "^8.2.15",
-    "postcss-loader": "^4.2.0",
-    "sass": "^1.32.12",
-    "sass-loader": "^10.2.0",
-    "serve": "^11.0.0",
-    "style-loader": "^2.0.0",
-    "svelte": "^3.38.2",
-    "svelte-loader": "^2.13.6",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-nested": "^5.0.6",
+    "sass": "^1.41.1",
+    "sass-loader": "^12.1.0",
+    "serve": "^12.0.1",
+    "style-loader": "^3.2.1",
+    "svelte": "^3.42.6",
+    "svelte-loader": "^3.1.2",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "cross-env NODE_ENV=development webpack",
-    "dev": "webpack serve --content-base public --port 8585"
+    "dev": "webpack serve --static public --port 8585"
   },
   "license": "MIT"
 }
