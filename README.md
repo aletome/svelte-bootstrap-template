@@ -49,7 +49,7 @@ To generate production bundle:
 npm run build
 ```
 
-This command create in `public` folder `index.html` and `bundel-xxxxx.js`, where `xxxxx` is a hash that changes every build.
+This command creates `index.html` and `bundel-xxxxx.js` in `public` folder, where `xxxxx` is a hash that changes every build.
 
 To generate development bundle with source map file:
 
